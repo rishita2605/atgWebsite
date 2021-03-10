@@ -1,0 +1,236 @@
+$nav-inactive: #8A8A8A;
+$accent-grey: #EDEEF0;
+$hover-darken:#c7c7c7;
+
+@mixin removestyles {
+    outline: none;
+    background: none;
+    border: none;
+
+    &:link {
+        text-decoration: none;
+
+    }
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    /* background-color: khaki; 
+    height: 200vh;*/
+}
+
+.nav-section {
+    background-color: #FFFFFF;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background-image: url("./Images/logo.jpg");
+    width: 162.57px;
+    height: 24px;
+}
+
+.search {
+    @include removestyles();
+    font-family: 'IBM Plex Sans', sans-serif, 'Font Awesome 5 Free';
+    color: #5C5C5C;
+    font-weight: 600;
+    background-color: #F2F2F2;
+    width: 360px;
+    height: 42px;
+    border-radius: 21px;
+    padding: 15px;
+
+}
+
+.create-account-group {
+    font-size: 16px;
+    color: #2E2E2E;
+
+    a {
+        @include removestyles();
+    }
+
+    button {
+        @include removestyles();
+    }
+}
+
+.content {
+    padding: 0;
+}
+
+.section-1 {
+
+    /* background: url("./Images/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    padding: 0 0 5.5% 14%;*/
+    /* height:440px; */
+    img {
+        height: auto;
+    }
+
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-shadow:2px 2px 30px #2e2e2e;
+
+    .h1 {
+        line-height: 30px;
+    }
+
+    .text-content {
+        position: absolute;
+        margin: 0 0 5.5% 14%;
+    }
+}
+
+.section-2{
+
+    .container-fluid {
+        width: 72%;
+        margin-top: 26px; 
+    }
+    .row{
+        /* margin: 46px auto; */
+        margin: auto;
+        /* border: 3px solid rgb(75, 25, 25); */
+        height: 100%;
+    }
+
+    [class^="col"]{
+        /* border: 2px solid yellow; */
+        padding: 0;
+        margin: 0;
+    }
+
+   
+    .navigation{
+         
+        border-bottom: 1px solid #E0E0E0;
+
+        .article , .event, .edu, .job{
+            @include removestyles();
+            color:$nav-inactive;
+            height: 100%;
+            margin-right: 20px;
+        }
+
+        .side-nav{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn{
+            height: 36px;
+            margin-bottom: 8px;
+
+        }
+        .btn-light{
+            background-color: $accent-grey;
+            transition: background-color 400ms ease;
+            &:hover{
+                background-color: $hover-darken;
+            }
+        }
+
+        .btn-primary{
+            margin-left: 16px;
+        }
+
+        .allposts{
+            @include removestyles();
+            height: 100%;
+            color: #000;
+            border-bottom: 2px solid #000;
+            margin-right: 20px;
+        }
+    }
+
+    .posts{
+        border: 2px solid slateblue;
+        margin-top: 28px;
+
+    }
+
+    .post-1, .post-2, .post-3 {
+        /* height: 472px; */
+        border: 2px solid palevioletred;
+        margin-bottom: 16px;
+
+        .post-img{
+            width: 100%;
+        }
+
+        .post-content{
+            padding:20px;
+        }
+        .post-heading{
+            font-weight: 600;
+            font-size: 22px;
+            display: flex;
+
+            .heading-text{
+                width: 85%;
+                margin-top: 10px;
+            }
+
+            .edit{
+                width: 15%;
+                display: flex;
+                justify-content: flex-end;
+                height: fit-content;
+                button{
+                    @include removestyles();
+                    width: 36px;
+                    height: 32px;
+                    border-radius: 4px;
+                    background-color: transparent;
+                    transition: background-color 400ms ease;
+                    &:hover{
+                        background-color: $hover-darken;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width:991.98px) {
+    .nav-section {
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .section-2{
+        .container-fluid{
+            width: 100%;
+        }
+    }
+    .navigation{
+        display:none;
+    }
+}

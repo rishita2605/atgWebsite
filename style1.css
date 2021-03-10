@@ -1,0 +1,278 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1em;
+  /* background-color: khaki; 
+    height: 200vh;*/
+}
+
+.nav-section {
+  background-color: #FFFFFF;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  background-image: url("./Images/logo.jpg");
+  width: 162.57px;
+  height: 24px;
+}
+
+.search {
+  outline: none;
+  background: none;
+  border: none;
+  font-family: 'IBM Plex Sans', sans-serif, 'Font Awesome 5 Free';
+  color: #5C5C5C;
+  font-weight: 600;
+  background-color: #F2F2F2;
+  width: 360px;
+  height: 42px;
+  border-radius: 21px;
+  padding: 15px;
+}
+
+.search:link {
+  text-decoration: none;
+}
+
+.create-account-group {
+  font-size: 16px;
+  color: #2E2E2E;
+}
+
+.create-account-group a {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.create-account-group a:link {
+  text-decoration: none;
+}
+
+.create-account-group button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.create-account-group button:link {
+  text-decoration: none;
+}
+
+.content {
+  padding: 0;
+}
+
+.section-1 {
+  /* background: url("./Images/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    padding: 0 0 5.5% 14%;*/
+  /* height:440px; */
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-shadow: 2px 2px 30px #2e2e2e;
+}
+
+.section-1 img {
+  height: auto;
+}
+
+.section-1 .h1 {
+  line-height: 30px;
+}
+
+.section-1 .text-content {
+  position: absolute;
+  margin: 0 0 5.5% 14%;
+}
+
+.section-2 .container-fluid {
+  width: 72%;
+  margin-top: 26px;
+}
+
+.section-2 .row {
+  /* margin: 46px auto; */
+  margin: auto;
+  /* border: 3px solid rgb(75, 25, 25); */
+  height: 100%;
+}
+
+.section-2 [class^="col"] {
+  /* border: 2px solid yellow; */
+  padding: 0;
+  margin: 0;
+}
+
+.section-2 .navigation {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.section-2 .navigation .article, .section-2 .navigation .event, .section-2 .navigation .edu, .section-2 .navigation .job {
+  outline: none;
+  background: none;
+  border: none;
+  color: #8A8A8A;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.section-2 .navigation .article:link, .section-2 .navigation .event:link, .section-2 .navigation .edu:link, .section-2 .navigation .job:link {
+  text-decoration: none;
+}
+
+.section-2 .navigation .side-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.section-2 .navigation .btn {
+  height: 36px;
+  margin-bottom: 8px;
+}
+
+.section-2 .navigation .btn-light {
+  background-color: #EDEEF0;
+  -webkit-transition: background-color 400ms ease;
+  transition: background-color 400ms ease;
+}
+
+.section-2 .navigation .btn-light:hover {
+  background-color: #c7c7c7;
+}
+
+.section-2 .navigation .btn-primary {
+  margin-left: 16px;
+}
+
+.section-2 .navigation .allposts {
+  outline: none;
+  background: none;
+  border: none;
+  height: 100%;
+  color: #000;
+  border-bottom: 2px solid #000;
+  margin-right: 20px;
+}
+
+.section-2 .navigation .allposts:link {
+  text-decoration: none;
+}
+
+.section-2 .posts {
+  border: 2px solid slateblue;
+  margin-top: 28px;
+}
+
+.section-2 .post-1, .section-2 .post-2, .section-2 .post-3 {
+  /* height: 472px; */
+  border: 2px solid palevioletred;
+  margin-bottom: 16px;
+}
+
+.section-2 .post-1 .post-img, .section-2 .post-2 .post-img, .section-2 .post-3 .post-img {
+  width: 100%;
+}
+
+.section-2 .post-1 .post-content, .section-2 .post-2 .post-content, .section-2 .post-3 .post-content {
+  padding: 20px;
+}
+
+.section-2 .post-1 .post-heading, .section-2 .post-2 .post-heading, .section-2 .post-3 .post-heading {
+  font-weight: 600;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-2 .post-1 .post-heading .heading-text, .section-2 .post-2 .post-heading .heading-text, .section-2 .post-3 .post-heading .heading-text {
+  width: 85%;
+  margin-top: 10px;
+}
+
+.section-2 .post-1 .post-heading .edit, .section-2 .post-2 .post-heading .edit, .section-2 .post-3 .post-heading .edit {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.section-2 .post-1 .post-heading .edit button, .section-2 .post-2 .post-heading .edit button, .section-2 .post-3 .post-heading .edit button {
+  outline: none;
+  background: none;
+  border: none;
+  width: 36px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  -webkit-transition: background-color 400ms ease;
+  transition: background-color 400ms ease;
+}
+
+.section-2 .post-1 .post-heading .edit button:link, .section-2 .post-2 .post-heading .edit button:link, .section-2 .post-3 .post-heading .edit button:link {
+  text-decoration: none;
+}
+
+.section-2 .post-1 .post-heading .edit button:hover, .section-2 .post-2 .post-heading .edit button:hover, .section-2 .post-3 .post-heading .edit button:hover {
+  background-color: #c7c7c7;
+}
+
+@media (max-width: 991.98px) {
+  .nav-section {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  .section-2 .container-fluid {
+    width: 100%;
+  }
+  .navigation {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style1.css.map */
