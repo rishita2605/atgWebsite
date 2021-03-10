@@ -1,6 +1,9 @@
 $nav-inactive: #8A8A8A;
 $accent-grey: #EDEEF0;
 $hover-darken:#c7c7c7;
+$font-grey:#5C5C5C;
+$line-color:#E0E0E0;
+$font-dark:#2E2E2E;
 
 @mixin removestyles {
     outline: none;
@@ -13,7 +16,7 @@ $hover-darken:#c7c7c7;
     }
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -48,7 +51,7 @@ body {
 .search {
     @include removestyles();
     font-family: 'IBM Plex Sans', sans-serif, 'Font Awesome 5 Free';
-    color: #5C5C5C;
+    color: $font-grey;
     font-weight: 600;
     background-color: #F2F2F2;
     width: 360px;
@@ -60,7 +63,7 @@ body {
 
 .create-account-group {
     font-size: 16px;
-    color: #2E2E2E;
+    color: $font-dark;
 
     a {
         @include removestyles();
@@ -90,7 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-shadow:2px 2px 30px #2e2e2e;
+    text-shadow:2px 2px 30px $font-dark;
 
     .h1 {
         line-height: 30px;
@@ -102,60 +105,66 @@ body {
     }
 }
 
-.section-2{
+.section-2 {
 
     .container-fluid {
         width: 72%;
-        margin-top: 26px; 
+        margin-top: 26px;
     }
-    .row{
+
+    .row {
         /* margin: 46px auto; */
         margin: auto;
         /* border: 3px solid rgb(75, 25, 25); */
         height: 100%;
     }
 
-    [class^="col"]{
+    [class^="col"] {
         /* border: 2px solid yellow; */
         padding: 0;
         margin: 0;
     }
 
-   
-    .navigation{
-         
-        border-bottom: 1px solid #E0E0E0;
 
-        .article , .event, .edu, .job{
+    .navigation {
+
+        border-bottom: 1px solid $line-color;
+
+        .article,
+        .event,
+        .edu,
+        .job {
             @include removestyles();
-            color:$nav-inactive;
+            color: $nav-inactive;
             height: 100%;
             margin-right: 20px;
         }
 
-        .side-nav{
+        .side-nav {
             display: flex;
             justify-content: flex-end;
         }
 
-        .btn{
+        .btn {
             height: 36px;
             margin-bottom: 8px;
 
         }
-        .btn-light{
+
+        .btn-light {
             background-color: $accent-grey;
             transition: background-color 400ms ease;
-            &:hover{
+
+            &:hover {
                 background-color: $hover-darken;
             }
         }
 
-        .btn-primary{
+        .btn-primary {
             margin-left: 16px;
         }
 
-        .allposts{
+        .allposts {
             @include removestyles();
             height: 100%;
             color: #000;
@@ -164,50 +173,194 @@ body {
         }
     }
 
-    .posts{
-        border: 2px solid slateblue;
+    .posts {
+        /* border: 2px solid slateblue; */
         margin-top: 28px;
 
     }
 
-    .post-1, .post-2, .post-3 {
+    .post-1,
+    .post-2,
+    .post-3,
+    .post-4 {
         /* height: 472px; */
-        border: 2px solid palevioletred;
+        border: 1px solid $line-color;
         margin-bottom: 16px;
+        border-radius: 4px;
 
-        .post-img{
+        .post-img {
             width: 100%;
         }
 
-        .post-content{
-            padding:20px;
+        .post-content {
+            padding: 20px;
         }
-        .post-heading{
+
+        .post-heading {
             font-weight: 600;
             font-size: 22px;
             display: flex;
 
-            .heading-text{
+            .heading-text {
                 width: 85%;
-                margin-top: 10px;
+                margin-top: 12px;
             }
 
-            .edit{
+            .edit {
                 width: 15%;
                 display: flex;
                 justify-content: flex-end;
                 height: fit-content;
-                button{
+
+                button {
                     @include removestyles();
                     width: 36px;
                     height: 32px;
                     border-radius: 4px;
                     background-color: transparent;
                     transition: background-color 400ms ease;
-                    &:hover{
+
+                    &:hover {
                         background-color: $hover-darken;
                     }
                 }
+            }
+
+            .post-main-content {
+                margin-top: 10px;
+                color: $font-grey;
+            }
+        }
+
+        .meeting-details {
+            display: flex;
+            width: 55%;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+
+        .job-details{
+            display: flex;
+            width: 65%;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+
+        .visit-btn, .apply-btn {
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .profile-details {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user-details {
+            display: flex;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0em;
+            .username{
+                margin: auto 10px;
+            }
+
+        }
+
+        .post-details{
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            align-items: center;
+        }
+
+        /* .views{
+           justify-content: center;
+           display: flex;
+           align-items: center; 
+        } */
+        .share-btn {
+            @include removestyles();
+            width: 42px;
+            height: 36px;
+            border-radius: 4px;
+            background-color: #EDEEF0;
+            transition: background-color 400ms ease;
+
+            &:hover {
+                background-color: $hover-darken;
+            }
+        }
+
+        @for $i from 1 through 4 {
+            .profile-pic-#{$i} {
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-pic-1 {
+            background-image: url("./Images/dp-1.jpg");
+        }
+
+        .profile-pic-2 {
+            background-image: url("./Images/dp-2.jpg");
+        }
+
+        .profile-pic-3 {
+            background-image: url("./Images/dp-3.jpg");
+        }
+
+        .profile-pic-4 {
+            background-image: url("./Images/dp-4.jpg");
+        }
+    }
+
+    .sidebar{
+        /* border: 2px solid slateblue; */
+        display: flex;
+        color: $font-dark;
+        
+        .sidebar-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .location-inp{
+            width: 80%;
+            border-bottom: 2px solid $line-color;
+            padding-bottom: 11px;
+            height: 36px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            margin-top: 30px;
+            button, input{
+                @include removestyles();
+                color: $font-dark;
+            }
+            input{
+                width: 80%;
+            }
+            button{
+                width: 5.5%;
+            }  
+        }
+
+        .disclaimer{
+            font-size:12px;
+            line-height: 15px;
+            margin-top: 32px;
+            width: 80%;
+            opacity: 0.5;
+            display: flex;
+            i{
+                margin-top: 2px;
+                margin-right: 8px;
+                font-size: 15px;
             }
         }
     }
@@ -221,16 +374,19 @@ body {
         display: none;
     }
 
-    .sidebar{
-        display: none;
-    }
+    
 
-    .section-2{
-        .container-fluid{
+    .section-2 {
+        .container-fluid {
             width: 100%;
         }
     }
-    .navigation{
-        display:none;
+
+    .navigation {
+        display: none;
+    }
+
+    .sidebar, .section-2 .sidebar .sidebar-content {
+        display: none;
     }
 }
