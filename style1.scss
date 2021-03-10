@@ -1,9 +1,18 @@
 $nav-inactive: #8A8A8A;
+$input-bg:#F7F8FA;
 $accent-grey: #EDEEF0;
 $hover-darken:#c7c7c7;
 $font-grey:#5C5C5C;
 $line-color:#E0E0E0;
+$dark-line-color:#d9d9db;
 $font-dark:#2E2E2E;
+$header-light-green:#EFFFF4;
+$header-green-font:#008A45;
+$bootstrap-blue: #2F6CE5;
+
+
+
+/*mention font-size as variables and reduce font-size by  a particular percentage using media quesy*/
 
 @mixin removestyles {
     outline: none;
@@ -64,14 +73,6 @@ body {
 .create-account-group {
     font-size: 16px;
     color: $font-dark;
-
-    a {
-        @include removestyles();
-    }
-
-    button {
-        @include removestyles();
-    }
 }
 
 .content {
@@ -97,12 +98,19 @@ body {
 
     .h1 {
         line-height: 30px;
+
+    }
+
+    .sub-heading{
+        @include font-size(4rem);
     }
 
     .text-content {
         position: absolute;
         margin: 0 0 5.5% 14%;
     }
+
+
 }
 
 .section-2 {
@@ -160,8 +168,13 @@ body {
             }
         }
 
-        .btn-primary {
+        .join-btn {
             margin-left: 16px;
+            display: flex;
+            align-items: center;
+            i{
+                margin-right: 8px;
+            }
         }
 
         .allposts {
@@ -239,14 +252,15 @@ body {
             margin-top: 8px;
         }
 
-        .job-details{
+        .job-details {
             display: flex;
             width: 65%;
             justify-content: space-between;
             margin-top: 8px;
         }
 
-        .visit-btn, .apply-btn {
+        .visit-btn,
+        .apply-btn {
             width: 100%;
             margin-top: 16px;
         }
@@ -263,13 +277,14 @@ body {
             font-weight: 600;
             line-height: 23px;
             letter-spacing: 0em;
-            .username{
+
+            .username {
                 margin: auto 10px;
             }
 
         }
 
-        .post-details{
+        .post-details {
             display: flex;
             justify-content: space-between;
             width: 30%;
@@ -319,17 +334,18 @@ body {
         }
     }
 
-    .sidebar{
+    .sidebar {
         /* border: 2px solid slateblue; */
         display: flex;
         color: $font-dark;
-        
-        .sidebar-content{
+
+        .sidebar-content {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
         }
-        .location-inp{
+
+        .location-inp {
             width: 80%;
             border-bottom: 2px solid $line-color;
             padding-bottom: 11px;
@@ -338,26 +354,31 @@ body {
             justify-content: space-between;
             margin: 0;
             margin-top: 30px;
-            button, input{
+
+            button,
+            input {
                 @include removestyles();
                 color: $font-dark;
             }
-            input{
+
+            input {
                 width: 80%;
             }
-            button{
+
+            button {
                 width: 5.5%;
-            }  
+            }
         }
 
-        .disclaimer{
-            font-size:12px;
+        .disclaimer {
+            font-size: 12px;
             line-height: 15px;
             margin-top: 32px;
             width: 80%;
             opacity: 0.5;
             display: flex;
-            i{
+
+            i {
                 margin-top: 2px;
                 margin-right: 8px;
                 font-size: 15px;
@@ -367,6 +388,374 @@ body {
 
 }
 
+.floating-section {
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .floating-signup {
+        /* height: 70%;
+        width: 51%; 
+        border: 2px solid slateblue;*/
+        border-radius: 8px;
+        height: 513px;
+        width: 736px;
+        /* left: 352px;
+        top: 186px; */
+        border-radius: 8px;
+
+    }
+
+    .signup-header {
+        height: 10%;
+        background-color: $header-light-green;
+        border-radius: 8px 8px 0 0;
+        color: $header-green-font;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+
+        .cross {
+            /* @include removestyles(); */
+            /* position: absolute;
+             top: 11.33%;
+            right: 22.63%; */
+            /* top:55px;
+            right: 300px;
+            */
+            /* color: $font-dark;
+            background-color: #FFFFFF;  */
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            height: 23px;
+            width: 23px;
+        }
+
+    }
+
+
+    .signup-main {
+        height: 90%;
+        background-color: #FFFFFF;
+        border-radius: 0 0 8px 8px;
+        padding: 24px 36px;
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                font-size: 24px;
+                font-weight: 700;
+
+            }
+
+            .right {
+                font-size: 13px;
+            }
+        }
+
+        .signin-btn {
+            @include removestyles();
+            color: $bootstrap-blue;
+            box-shadow: 0 0 0 0 $bootstrap-blue;
+            transition: box-shadow 200ms ease;
+
+            &:hover {
+                box-shadow: 0 2px 0 0 $bootstrap-blue;
+            }
+        }
+
+        .signup-main-content {
+            height: 85%;
+            display: flex;
+            margin-top: 15px;
+
+            .right {
+                height: 100%;
+                width: 50%;
+                margin-left: 8px;
+
+                img {
+                    margin: 4% 0 15% 8%;
+                }
+
+                .tnc {
+                    font-size: 11px;
+                    opacity: 0.6;
+                    letter-spacing: 0.8;
+                }
+
+
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+
+                .name {
+                    display: flex;
+                    width: 100%;
+
+                    .fname,
+                    .lname {
+                        width: 50%;
+                    }
+                }
+
+                .pwd {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+
+                input {
+                    @include removestyles();
+                    max-height: 45px;
+                    border: 1px solid $dark-line-color;
+                    background-color: $input-bg;
+                    padding: 12px;
+                    border-radius: 2px;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .create-acc-btn {
+                    max-height: 40px;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                }
+
+                .fbsu,
+                .googlesu {
+                    @include removestyles();
+                    height: 38px;
+                    border: 1px solid $dark-line-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    transition: background-color 300ms ease-in;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .fbsu {
+                    margin-top: 20px;
+                    margin-bottom: 8px;
+                }
+
+            }
+        }
+    }
+
+    /*change here*/
+    display: none;
+
+    
+
+}
+
+.floating-section-login {
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .floating-signup {
+        border-radius: 8px;
+        left: 352px;
+        top: 186px;
+        border-radius: 8px;
+        height: 513px;
+        width: 736px;
+
+    }
+
+
+
+    .signup-header {
+        height: 10%;
+        background-color: $header-light-green;
+        border-radius: 8px 8px 0 0;
+        color: $header-green-font;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+
+        .cross-login {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            height: 23px;
+            width: 23px;
+        }
+
+    }
+
+    .signup-main {
+        height: 90%;
+        background-color: #FFFFFF;
+        border-radius: 0 0 8px 8px;
+        padding: 24px 36px;
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                font-size: 24px;
+                font-weight: 700;
+
+            }
+
+            .right {
+                font-size: 13px;
+            }
+        }
+
+        .signup-btn {
+            @include removestyles();
+            color: $bootstrap-blue;
+            box-shadow: 0 0 0 0 $bootstrap-blue;
+            transition: box-shadow 200ms ease;
+
+            &:hover {
+                box-shadow: 0 2px 0 0 $bootstrap-blue;
+            }
+        }
+
+        .signup-main-content {
+            height: 85%;
+            display: flex;
+            margin-top: 32px;
+
+            .right {
+                height: 100%;
+                width: 50%;
+                margin-left: 8px;
+
+                img {
+                    margin: 4% 0 15% 8%;
+                }
+
+
+
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+
+                .pwd {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                    }
+
+                }
+
+                .forgotpwd{
+                    font-size: 12px;
+                    text-align: center;
+                    margin-top: 23px;
+                }
+
+                input {
+                    @include removestyles();
+                    max-height: 45px;
+                    border: 1px solid $dark-line-color;
+                    background-color: $input-bg;
+                    padding: 12px;
+                    border-radius: 2px;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $accent-grey;
+                    }
+
+                }
+
+                .create-acc-btn {
+                    max-height: 40px;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                }
+
+                .fbsu,
+                .googlesu {
+                    @include removestyles();
+                    height: 38px;
+                    border: 1px solid $dark-line-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    transition: background-color 300ms ease-in;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .fbsu {
+                    margin-top: 20px;
+                    margin-bottom: 8px;
+                }
+
+            }
+        }
+    }
+
+    /*change here*/
+    display: none;
+
+}
 
 
 @media (max-width:991.98px) {
@@ -374,7 +763,13 @@ body {
         display: none;
     }
 
-    
+
+    .section-1{
+
+        .sub-heading{
+            font-size: 12px;
+        }
+    }
 
     .section-2 {
         .container-fluid {
@@ -386,7 +781,8 @@ body {
         display: none;
     }
 
-    .sidebar, .section-2 .sidebar .sidebar-content {
+    .sidebar,
+    .section-2 .sidebar .sidebar-content {
         display: none;
     }
 }

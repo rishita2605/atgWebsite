@@ -1,3 +1,4 @@
+/*mention font-size as variables and reduce font-size by  a particular percentage using media quesy*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -60,26 +61,6 @@ body {
 .create-account-group {
   font-size: 16px;
   color: #2E2E2E;
-}
-
-.create-account-group a {
-  outline: none;
-  background: none;
-  border: none;
-}
-
-.create-account-group a:link {
-  text-decoration: none;
-}
-
-.create-account-group button {
-  outline: none;
-  background: none;
-  border: none;
-}
-
-.create-account-group button:link {
-  text-decoration: none;
 }
 
 .content {
@@ -184,8 +165,18 @@ body {
   background-color: #c7c7c7;
 }
 
-.section-2 .navigation .btn-primary {
+.section-2 .navigation .join-btn {
   margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-2 .navigation .join-btn i {
+  margin-right: 8px;
 }
 
 .section-2 .navigation .allposts {
@@ -336,7 +327,8 @@ body {
   margin-top: 8px;
 }
 
-.section-2 .post-1 .visit-btn, .section-2 .post-1 .apply-btn,
+.section-2 .post-1 .visit-btn,
+.section-2 .post-1 .apply-btn,
 .section-2 .post-2 .visit-btn,
 .section-2 .post-2 .apply-btn,
 .section-2 .post-3 .visit-btn,
@@ -525,14 +517,16 @@ body {
   margin-top: 30px;
 }
 
-.section-2 .sidebar .location-inp button, .section-2 .sidebar .location-inp input {
+.section-2 .sidebar .location-inp button,
+.section-2 .sidebar .location-inp input {
   outline: none;
   background: none;
   border: none;
   color: #2E2E2E;
 }
 
-.section-2 .sidebar .location-inp button:link, .section-2 .sidebar .location-inp input:link {
+.section-2 .sidebar .location-inp button:link,
+.section-2 .sidebar .location-inp input:link {
   text-decoration: none;
 }
 
@@ -561,9 +555,476 @@ body {
   font-size: 15px;
 }
 
+.floating-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.432);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*change here*/
+  display: none;
+}
+
+.floating-section .floating-signup {
+  /* height: 70%;
+        width: 51%; 
+        border: 2px solid slateblue;*/
+  border-radius: 8px;
+  height: 513px;
+  width: 736px;
+  /* left: 352px;
+        top: 186px; */
+  border-radius: 8px;
+}
+
+.floating-section .signup-header {
+  height: 10%;
+  background-color: #EFFFF4;
+  border-radius: 8px 8px 0 0;
+  color: #008A45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.floating-section .signup-header .cross {
+  /* @include removestyles(); */
+  /* position: absolute;
+             top: 11.33%;
+            right: 22.63%; */
+  /* top:55px;
+            right: 300px;
+            */
+  /* color: $font-dark;
+            background-color: #FFFFFF;  */
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+}
+
+.floating-section .signup-main {
+  height: 90%;
+  background-color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+  padding: 24px 36px;
+}
+
+.floating-section .signup-main .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.floating-section .signup-main .heading .left {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.floating-section .signup-main .heading .right {
+  font-size: 13px;
+}
+
+.floating-section .signup-main .signin-btn {
+  outline: none;
+  background: none;
+  border: none;
+  color: #2F6CE5;
+  -webkit-box-shadow: 0 0 0 0 #2F6CE5;
+          box-shadow: 0 0 0 0 #2F6CE5;
+  -webkit-transition: -webkit-box-shadow 200ms ease;
+  transition: -webkit-box-shadow 200ms ease;
+  transition: box-shadow 200ms ease;
+  transition: box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+}
+
+.floating-section .signup-main .signin-btn:link {
+  text-decoration: none;
+}
+
+.floating-section .signup-main .signin-btn:hover {
+  -webkit-box-shadow: 0 2px 0 0 #2F6CE5;
+          box-shadow: 0 2px 0 0 #2F6CE5;
+}
+
+.floating-section .signup-main .signup-main-content {
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.floating-section .signup-main .signup-main-content .right {
+  height: 100%;
+  width: 50%;
+  margin-left: 8px;
+}
+
+.floating-section .signup-main .signup-main-content .right img {
+  margin: 4% 0 15% 8%;
+}
+
+.floating-section .signup-main .signup-main-content .right .tnc {
+  font-size: 11px;
+  opacity: 0.6;
+  letter-spacing: 0.8;
+}
+
+.floating-section .signup-main .signup-main-content .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.floating-section .signup-main .signup-main-content .left .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.floating-section .signup-main .signup-main-content .left .name .fname,
+.floating-section .signup-main .signup-main-content .left .name .lname {
+  width: 50%;
+}
+
+.floating-section .signup-main .signup-main-content .left .pwd {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-section .signup-main .signup-main-content .left .pwd input {
+  width: 100%;
+}
+
+.floating-section .signup-main .signup-main-content .left input {
+  outline: none;
+  background: none;
+  border: none;
+  max-height: 45px;
+  border: 1px solid #d9d9db;
+  background-color: #F7F8FA;
+  padding: 12px;
+  border-radius: 2px;
+}
+
+.floating-section .signup-main .signup-main-content .left input:link {
+  text-decoration: none;
+}
+
+.floating-section .signup-main .signup-main-content .left input:hover, .floating-section .signup-main .signup-main-content .left input:focus {
+  background-color: #EDEEF0;
+}
+
+.floating-section .signup-main .signup-main-content .left .create-acc-btn {
+  max-height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.floating-section .signup-main .signup-main-content .left .fbsu,
+.floating-section .signup-main .signup-main-content .left .googlesu {
+  outline: none;
+  background: none;
+  border: none;
+  height: 38px;
+  border: 1px solid #d9d9db;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
+}
+
+.floating-section .signup-main .signup-main-content .left .fbsu:link,
+.floating-section .signup-main .signup-main-content .left .googlesu:link {
+  text-decoration: none;
+}
+
+.floating-section .signup-main .signup-main-content .left .fbsu img,
+.floating-section .signup-main .signup-main-content .left .googlesu img {
+  margin-right: 10px;
+}
+
+.floating-section .signup-main .signup-main-content .left .fbsu:hover,
+.floating-section .signup-main .signup-main-content .left .googlesu:hover {
+  background-color: #EDEEF0;
+}
+
+.floating-section .signup-main .signup-main-content .left .fbsu {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.floating-section-login {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.432);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*change here*/
+  display: none;
+}
+
+.floating-section-login .floating-signup {
+  border-radius: 8px;
+  left: 352px;
+  top: 186px;
+  border-radius: 8px;
+  height: 513px;
+  width: 736px;
+}
+
+.floating-section-login .signup-header {
+  height: 10%;
+  background-color: #EFFFF4;
+  border-radius: 8px 8px 0 0;
+  color: #008A45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+.floating-section-login .signup-header .cross-login {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  height: 23px;
+  width: 23px;
+}
+
+.floating-section-login .signup-main {
+  height: 90%;
+  background-color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+  padding: 24px 36px;
+}
+
+.floating-section-login .signup-main .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.floating-section-login .signup-main .heading .left {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.floating-section-login .signup-main .heading .right {
+  font-size: 13px;
+}
+
+.floating-section-login .signup-main .signup-btn {
+  outline: none;
+  background: none;
+  border: none;
+  color: #2F6CE5;
+  -webkit-box-shadow: 0 0 0 0 #2F6CE5;
+          box-shadow: 0 0 0 0 #2F6CE5;
+  -webkit-transition: -webkit-box-shadow 200ms ease;
+  transition: -webkit-box-shadow 200ms ease;
+  transition: box-shadow 200ms ease;
+  transition: box-shadow 200ms ease, -webkit-box-shadow 200ms ease;
+}
+
+.floating-section-login .signup-main .signup-btn:link {
+  text-decoration: none;
+}
+
+.floating-section-login .signup-main .signup-btn:hover {
+  -webkit-box-shadow: 0 2px 0 0 #2F6CE5;
+          box-shadow: 0 2px 0 0 #2F6CE5;
+}
+
+.floating-section-login .signup-main .signup-main-content {
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+}
+
+.floating-section-login .signup-main .signup-main-content .right {
+  height: 100%;
+  width: 50%;
+  margin-left: 8px;
+}
+
+.floating-section-login .signup-main .signup-main-content .right img {
+  margin: 4% 0 15% 8%;
+}
+
+.floating-section-login .signup-main .signup-main-content .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .pwd {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .pwd input {
+  width: 100%;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .forgotpwd {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 23px;
+}
+
+.floating-section-login .signup-main .signup-main-content .left input {
+  outline: none;
+  background: none;
+  border: none;
+  max-height: 45px;
+  border: 1px solid #d9d9db;
+  background-color: #F7F8FA;
+  padding: 12px;
+  border-radius: 2px;
+}
+
+.floating-section-login .signup-main .signup-main-content .left input:link {
+  text-decoration: none;
+}
+
+.floating-section-login .signup-main .signup-main-content .left input:hover, .floating-section-login .signup-main .signup-main-content .left input:focus {
+  background-color: #EDEEF0;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .create-acc-btn {
+  max-height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .fbsu,
+.floating-section-login .signup-main .signup-main-content .left .googlesu {
+  outline: none;
+  background: none;
+  border: none;
+  height: 38px;
+  border: 1px solid #d9d9db;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .fbsu:link,
+.floating-section-login .signup-main .signup-main-content .left .googlesu:link {
+  text-decoration: none;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .fbsu img,
+.floating-section-login .signup-main .signup-main-content .left .googlesu img {
+  margin-right: 10px;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .fbsu:hover,
+.floating-section-login .signup-main .signup-main-content .left .googlesu:hover {
+  background-color: #EDEEF0;
+}
+
+.floating-section-login .signup-main .signup-main-content .left .fbsu {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 991.98px) {
   .nav-section {
     display: none;
+  }
+  .section-1 .sub-heading {
+    font-size: 12px;
   }
   .section-2 .container-fluid {
     width: 100%;
@@ -571,7 +1032,8 @@ body {
   .navigation {
     display: none;
   }
-  .sidebar, .section-2 .sidebar .sidebar-content {
+  .sidebar,
+  .section-2 .sidebar .sidebar-content {
     display: none;
   }
 }
