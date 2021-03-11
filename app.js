@@ -1,11 +1,10 @@
-const { noop } = require("jquery");
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
 
-const app=require("express")();
-const POSRT= process.env.PORT || 3000;
-app.get("", (req,res)=>{
-    res.send("Hello");
-});
+app.use(express.static(path.join(__dirname, "main")));
 
-app.listen(PORT,()=>{
-    console.log(`App up at port ${PORT}`);
-});
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');
