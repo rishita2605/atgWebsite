@@ -33,6 +33,7 @@ $(".rec-btn").click(following)
 
 //sign in
 $(".floating-section-login .create-acc-btn").click(logIn)
+$(".floating-login-section-mobile .create-acc-btn").click(logIn)
 
 //sign out
 $(".logged-in .log-out-btn").click(logOut)
@@ -156,6 +157,7 @@ function logIn(){
     var chk=sessionStorage.getItem("checklogin")
     if(chk==1){
         hideSignin()
+        hideMobSignin()
         $(".logged-in").css("display","flex")
         $(".not-logged-in").css("display","none")
         $(".recommended-section").css("display","block")
