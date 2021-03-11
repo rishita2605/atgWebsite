@@ -63,6 +63,38 @@ body {
   color: #2E2E2E;
 }
 
+.create-account-group .not-logged-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-account-group .logged-in {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-account-group .logged-in button {
+  outline: none;
+  background: none;
+  border: none;
+  margin-left: 12px;
+}
+
+.create-account-group .logged-in button:link {
+  text-decoration: none;
+}
+
+.create-account-group .logged-in .dropdown-menu {
+  -webkit-box-shadow: 0 2px 30px rgba(255, 255, 255, 0.363);
+          box-shadow: 0 2px 30px rgba(255, 255, 255, 0.363);
+}
+
 .content {
   padding: 0;
 }
@@ -610,6 +642,7 @@ body {
 }
 
 .section-2 .sidebar .recommended-section {
+  display: none;
   width: 80%;
   margin-top: 54px;
 }
@@ -1302,7 +1335,8 @@ body {
           box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.247);
 }
 
-.floating-section-mobile, .floating-login-section-mobile {
+.floating-section-mobile,
+.floating-login-section-mobile {
   display: none;
 }
 

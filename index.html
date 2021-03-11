@@ -44,11 +44,23 @@
 
                 <input class="search" type="text" placeholder="&#xf002;   Search for your favourite groups in ATG" />
                 <div class="create-account-group">
-                    Create Account.
-                    <button class="signup-btn btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
-                        It's free!
-                        <i class="fas fa-caret-down"></i>
-                    </button>
+                    <div class="not-logged-in">
+                        Create Account.
+                        <button class="signup-btn btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
+                            It's free!
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </div>
+                    <div class="logged-in">
+                        <img class="user-img" src="./Images/login-user.jpg"/>
+                        <div class="uname">
+                            <button class="dropdown-toggle" data-toggle="dropdown">Siddharth Goyal &nbsp;</button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-item settings">Settings</div>
+                                <div class="dropdown-item log-out-btn">Log Out</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -333,7 +345,7 @@
                                 <button class="loc">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </button>
-                                <input class="location" type="text" placeholder="Location">
+                                <input class="location" type="text" placeholder="Enter your location">
                                 <button class="loc-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </button>

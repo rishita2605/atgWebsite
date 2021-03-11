@@ -31,6 +31,12 @@ $(".join-mobile").click(joinMobGroup)
 //follow button
 $(".rec-btn").click(following)
 
+//sign in
+$(".floating-section-login .create-acc-btn").click(logIn)
+
+//sign out
+$(".logged-in .log-out-btn").click(logOut)
+
 function showSignup() {
     $(".floating-section").css("display", "flex")
     $("body").css("overflow", "hidden")
@@ -141,5 +147,28 @@ function following(evt){
         $(elem).css("background-color","#d9d9db")
         $(elem).css("color","rgb(0,0,0)")
         $(elem).text("Follow")
+    }
+}
+
+function logIn(){
+    console.log("logged in")
+    sessionStorage.setItem("checklogin", "1")
+    var chk=sessionStorage.getItem("checklogin")
+    if(chk==1){
+        hideSignin()
+        $(".logged-in").css("display","flex")
+        $(".not-logged-in").css("display","none")
+        $(".recommended-section").css("display","block")
+    }
+}
+
+function logOut(){
+    console.log("logged in")
+    sessionStorage.setItem("checklogin", "0")
+    var chk=sessionStorage.getItem("checklogin")
+    if(chk==0){
+        $(".logged-in").css("display","none")
+        $(".not-logged-in").css("display","flex")
+        $(".recommended-section").css("display","none")
     }
 }

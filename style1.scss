@@ -73,8 +73,29 @@ body {
 }
 
 .create-account-group {
+
     font-size: 16px;
     color: $font-dark;
+
+    .not-logged-in {
+        
+        display: flex;
+        align-items: center;
+    }
+
+    .logged-in{
+        display: none;
+        align-items: center;
+        button{
+            @include removestyles();
+            margin-left: 12px;
+
+        }
+
+        .dropdown-menu{
+            box-shadow: 0 2px 30px rgba(255, 255, 255, 0.363);
+        }
+    }
 }
 
 .content {
@@ -423,18 +444,19 @@ body {
             }
         }
 
-        .recommended-section{
+        .recommended-section {
             //border: 2px solid crimson;
+            display: none;
             width: 80%;
             margin-top: 54px;
-            
-            .rec-header{
+
+            .rec-header {
                 font-size: 14px;
                 letter-spacing: 1px;
             }
 
-            .seemore{
-                display:block;
+            .seemore {
+                display: block;
                 margin-top: 60px;
                 font-size: 12px;
                 justify-self: flex-end;
@@ -442,38 +464,42 @@ body {
                 transform: scale(1);
                 transition: all 300ms ease-in;
 
-                &:hover{
+                &:hover {
                     /* transform: scale(1.1); */
                     font-size: 14px;
                 }
-                
+
             }
-            @for $i from 1 through 4{
+
+            @for $i from 1 through 4 {
                 .rec-thread-#{$i} {
                     //font-size: 18px;
-                    margin-top:22px ;
+                    margin-top: 22px;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    .top-div{
+
+                    .top-div {
                         display: flex;
                         justify-content: space-between;
                     }
-                    .rec-img{
+
+                    .rec-img {
                         background-image: url("./Images/rec-#{$i}.jpg");
                         height: 36px;
                         width: 36px;
                         margin-right: 12px;
                     }
 
-                    .rec-btn{
+                    .rec-btn {
                         @include removestyles();
                         font-size: 12px;
                         background-color: $dark-line-color;
                         padding: 4px 12px;
                         border-radius: 14px;
                         transition: background-color 300ms ease-in;
-                        &:hover{
+
+                        &:hover {
                             background-color: $input-bg;
                         }
                     }
@@ -481,7 +507,7 @@ body {
                 }
             }
 
-            
+
         }
 
     }
@@ -858,13 +884,14 @@ body {
 
 }
 
-.dropdown-menu{
+.dropdown-menu {
     //border: 2px solid palevioletred;
     box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.247);
 }
 
 //hiding signup and signin of mobile
-.floating-section-mobile, .floating-login-section-mobile{
+.floating-section-mobile,
+.floating-login-section-mobile {
     display: none;
 }
 
@@ -945,7 +972,8 @@ body {
             top: 90%;
             right: 5%;
             transform: scale(1);
-            transition: all 300ms ease-in ;
+            transition: all 300ms ease-in;
+
             &:hover {
                 font-size: 1.8rem;
                 transform: scale(0.9);
@@ -1021,7 +1049,7 @@ body {
     }
 
 
-    
+
 
     .floating-section-mobile {
 
@@ -1162,7 +1190,7 @@ body {
 
         //change
         display: none;
-        
+
         height: 100vh;
         width: 100vw;
         background-color: rgba(0, 0, 0, 0.527);
