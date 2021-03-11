@@ -28,7 +28,9 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css" rel="stylesheet">
+    <!--STYLESHEETS-->
     <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="./mediaquery.css" />
     <title>Document</title>
 </head>
 
@@ -52,7 +54,7 @@
         </div>
         <div class="section-1">
             <button type="button" class="join-mobile btn btn-outline-light">Join Group</button>
-            <img class="mobile-bg-img" src="./Images/mobile-bg.jpg"/>
+            <img class="mobile-bg-img" src="./Images/mobile-bg.jpg" />
             <img class="desktop-bg-img" src="Images/background-1.jpg" />
             <div class="text-content">
                 <p class="h1">Computer Engineering</p>
@@ -61,13 +63,21 @@
         </div>
         <div class="section-2">
             <div class="container-fluid">
+                <button class="mobile-edit-btn">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
                 <div class="navigation-mobile row">
+
                     <div class="left">
                         Posts(368)
                     </div>
+
+
                     <div class="right">
-                        <button type="button" class="btn btn-light">Filter : All &nbsp; <i class="fas fa-caret-down"></i></button>
+                        <button type="button" class="btn btn-light">Filter : All &nbsp; <i
+                                class="fas fa-caret-down"></i></button>
                     </div>
+
                 </div>
                 <div class="navigation row">
                     <div class="col-lg-7">
@@ -92,13 +102,13 @@
                             Write a Post &nbsp; <i class="fas fa-caret-down"></i>
                         </button>
                         <button class="join-btn btn btn-primary">
-                            <i class="fas fa-user-plus"></i> 
+                            <i class="fas fa-user-plus"></i>
                             <div class="join-text">Join Group</div>
                         </button>
                     </div>
                 </div>
-                <div class="posts row">
-                    <div class="col-lg-8 col-12">
+                <div class="posts row justify-content-center">
+                    <div class="col-lg-8 col-sm-9 col-12">
                         <div class="post-1">
                             <img class="post-img" src="Images/post-1.jpg" />
                             <div class="post-content">
@@ -122,7 +132,12 @@
                                     <div class="user-details">
                                         <div class="profile-pic-1"></div>
                                         <div class="username">
-                                            Sarthak Kamra
+                                            <div class="uname">
+                                                Sarthak Kamra
+                                            </div>
+                                            <div class="mobile-views">
+                                                800 views
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="post-details">
@@ -132,6 +147,7 @@
                                         </div>
                                         <button class="share-btn">
                                             <i class="fas fa-share-alt"></i>
+                                            <div class="share-text">Share</div>
                                         </button>
                                     </div>
                                 </div>
@@ -160,7 +176,12 @@
                                     <div class="user-details">
                                         <div class="profile-pic-2"></div>
                                         <div class="username">
-                                            Sarah West
+                                            <div class="uname">
+                                                Sarah West
+                                            </div>
+                                            <div class="mobile-views">
+                                                800 views
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="post-details">
@@ -170,6 +191,7 @@
                                         </div>
                                         <button class="share-btn">
                                             <i class="fas fa-share-alt"></i>
+                                            <div class="share-text">Share</div>
                                         </button>
                                     </div>
                                 </div>
@@ -208,7 +230,12 @@
                                     <div class="user-details">
                                         <div class="profile-pic-3"></div>
                                         <div class="username">
-                                            Ronal Jones
+                                            <div class="uname">
+                                                Ronal Jones
+                                            </div>
+                                            <div class="mobile-views">
+                                                800 views
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="post-details">
@@ -218,6 +245,7 @@
                                         </div>
                                         <button class="share-btn">
                                             <i class="fas fa-share-alt"></i>
+                                            <div class="share-text">Share</div>
                                         </button>
                                     </div>
                                 </div>
@@ -256,7 +284,12 @@
                                     <div class="user-details">
                                         <div class="profile-pic-4"></div>
                                         <div class="username">
-                                            Joseph Gray
+                                            <div class="uname">
+                                                Joseph Gray
+                                            </div>
+                                            <div class="mobile-views">
+                                                800 views
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="post-details">
@@ -266,6 +299,7 @@
                                         </div>
                                         <button class="share-btn">
                                             <i class="fas fa-share-alt"></i>
+                                            <div class="share-text">Share</div>
                                         </button>
                                     </div>
                                 </div>
@@ -290,9 +324,56 @@
                                     Your location will help us serve better and extend a personalised experience.
                                 </div>
                             </div>
+                            <div class="recommended-section">
+                                <div class="rec-header">
+                                    <i class="far fa-thumbs-up"></i>
+                                    RECOMMENDED GROUPS
+                                </div>
+                                <div class="rec-body">
+                                    <div class="rec-thread-1">
+                                        <div class="top-div">
+                                            <div class="rec-img"></div>
+                                            <div class="rec-topic">
+                                                Leisure
+                                            </div>
+                                        </div>
+                                        <button class="rec-btn">Follow</button>
+                                    </div>
+                                    <div class="rec-thread-2">
+                                        <div class="top-div">
+                                            <div class="rec-img"></div>
+                                            <div class="rec-topic">
+                                                Activism
+                                            </div>
+                                        </div>
+                                        <button class="rec-btn">Follow</button>
+                                    </div>
+                                    <div class="rec-thread-3">
+                                        <div class="top-div">
+                                            <div class="rec-img"></div>
+                                            <div class="rec-topic">
+                                                MBA
+                                            </div>
+                                        </div>
+                                        <button class="rec-btn">Follow</button>
+                                    </div>
+                                    <div class="rec-thread-4">
+                                        <div class="top-div">
+                                            <div class="rec-img"></div>
+                                            <div class="rec-topic">
+                                                Philosophy
+                                            </div>
+                                        </div>
+                                        <button class="rec-btn">Follow</button>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-primary">See More...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
         <div class="floating-section">
@@ -300,7 +381,8 @@
                 <div class="signup-header">
 
                     <div class="header-text">
-                        Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
+                        Let's learn, share & inspire each other with our passion for computer engineering. Sign up now
+                        🤘🏼
                     </div>
                     <button class="cross btn btn-outline-danger"><i class="fas fa-times"></i></button>
                 </div>
@@ -317,20 +399,22 @@
                     <div class="signup-main-content">
                         <div class="left">
                             <div class="name">
-                                <input class="fname" type="text" placeholder="First Name" maxlength="16"/>
-                                <input class="lname" type="text" placeholder="Last Name" maxlength="16"/>
+                                <input class="fname" type="text" placeholder="First Name" maxlength="16" />
+                                <input class="lname" type="text" placeholder="Last Name" maxlength="16" />
                             </div>
-                            <input class="email" placeholder="Email" type="email"/>
+                            <input class="email" placeholder="Email" type="email" />
                             <div class="pwd">
-                                <input class="password" placeholder="Password" type="password"/>
+                                <input class="password" placeholder="Password" type="password" />
                             </div>
-                            <input class="conf-password" placeholder="Confirm Password" type="password"/>
+                            <input class="conf-password" placeholder="Confirm Password" type="password" />
                             <button type="button" class="btn btn-primary create-acc-btn">Create Account</button>
-                            <button type="button" class="fbsu"> <img src="./Images/fb.jpg"/>Sign up with Facebook</button>
-                            <button type="button" class="googlesu"><img src="Images/google.jpg"/> Sign up with Google</button>
+                            <button type="button" class="fbsu"> <img src="./Images/fb.jpg" />Sign up with
+                                Facebook</button>
+                            <button type="button" class="googlesu"><img src="Images/google.jpg" /> Sign up with
+                                Google</button>
                         </div>
                         <div class="right">
-                            <img src="Images/createaccount.jpg"/>
+                            <img src="Images/createaccount.jpg" />
                             <div class="tnc">
                                 By signing up, you agree to our Terms & conditions, Privacy policy
                             </div>
@@ -344,7 +428,8 @@
                 <div class="signup-header">
 
                     <div class="header-text">
-                        Let's learn, share & inspire each other with our passion for computer engineering. Sign in now 🤘🏼
+                        Let's learn, share & inspire each other with our passion for computer engineering. Sign in now
+                        🤘🏼
                     </div>
                     <button class="cross-login btn btn-outline-danger"><i class="fas fa-times"></i></button>
                 </div>
@@ -355,36 +440,101 @@
                         </div>
 
                         <div class="right">
-                            Don’t have an account yet? <button class="signup-btn">Create new for free!  </button>
+                            Don’t have an account yet? <button class="signup-btn">Create new for free! </button>
                         </div>
                     </div>
                     <div class="signup-main-content">
                         <div class="left">
-                            
-                            <input class="email" placeholder="Email" type="email"/>
+
+                            <input class="email" placeholder="Email" type="email" />
                             <div class="pwd">
-                                <input class="password" placeholder="Password" type="password"/>
+                                <input class="password" placeholder="Password" type="password" />
                             </div>
-                            
+
                             <button type="button" class="btn btn-primary create-acc-btn">Sign In</button>
-                            <button type="button" class="fbsu"> <img src="./Images/fb.jpg"/>Sign in with Facebook</button>
-                            <button type="button" class="googlesu"><img src="Images/google.jpg"/> Sign in with Google</button>
+                            <button type="button" class="fbsu"> <img src="./Images/fb.jpg" />Sign in with
+                                Facebook</button>
+                            <button type="button" class="googlesu"><img src="Images/google.jpg" /> Sign in with
+                                Google</button>
                             <div class="forgotpwd">
                                 Forgot Password? <a class="link-primary" href="#">Click here</a>
                             </div>
                         </div>
                         <div class="right">
-                            <img src="Images/createaccount.jpg"/>
-                            
+                            <img src="Images/createaccount.jpg" />
+
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-section-mobile">
+            <div class="signup-mobile">
+                <div class="header">
+                    <div class="left">
+                        Create Account
+                    </div>
+                    <div class="right">
+                        <button class="cross btn btn-secondary"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="signup-mob-content">
+                    <div class="name">
+                        <input class="fname" type="text" placeholder="First Name" maxlength="16" />
+                        <input class="lname" type="text" placeholder="Last Name" maxlength="16" />
+                    </div>
+                    <input class="email" placeholder="Email" type="email" />
+                    <div class="pwd">
+                        <input class="password" placeholder="Password" type="password" />
+                    </div>
+                    <input class="conf-password" placeholder="Confirm Password" type="password" />
+                    <div class="ca-btn">
+                        <button type="button" class="btn btn-primary create-acc-btn">Create Account</button>
+                        <a class="signin-link link-dark">or, Sign In</a>
+                    </div>
+                    <button type="button" class="fbsu"> <img src="./Images/fb.jpg" />Sign up with
+                        Facebook</button>
+                    <button type="button" class="googlesu"><img src="Images/google.jpg" /> Sign up with
+                        Google</button>
+                    <div class="tnc">
+                        By signing up, you agree to our Terms & conditions, Privacy policy
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-login-section-mobile">
+            <div class="signup-mobile">
+                <div class="header">
+                    <div class="left">
+                        Welcome Back!
+                    </div>
+                    <div class="right">
+                        <button class="cross btn btn-secondary"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="signup-mob-content">
+
+                    <input class="email" placeholder="Email" type="email" />
+                    <div class="pwd">
+                        <input class="password" placeholder="Password" type="password" />
+                    </div>
+                    <div class="ca-btn">
+                        <button type="button" class="btn btn-primary create-acc-btn">Sign In</button>
+                        <a class="create-acc link-dark">or, Create Account</a>
+                    </div>
+                    <button type="button" class="fbsu"> <img src="./Images/fb.jpg" />Sign in with
+                        Facebook</button>
+                    <button type="button" class="googlesu"><img src="Images/google.jpg" /> Sign in with
+                        Google</button>
+                    <a href="#" class="forgot link-dark">Forgot Password?</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="./script1.js">
-        
+
     </script>
 </body>
 

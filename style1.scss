@@ -9,6 +9,9 @@ $font-dark:#2E2E2E;
 $header-light-green:#EFFFF4;
 $header-green-font:#008A45;
 $bootstrap-blue: #2F6CE5;
+$grad-1:#FF5C5C;
+$grad-2: #F0568A;
+
 
 
 /*mention font-size as variables and reduce font-size by  a particular percentage using media quesy*/
@@ -86,7 +89,7 @@ body {
     justify-content: flex-end;
     text-shadow: 2px 2px 30px $font-dark;
 
-    .join-mobile{
+    .join-mobile {
         display: none;
     }
 
@@ -94,7 +97,7 @@ body {
         height: auto;
     }
 
-   .mobile-bg-img {
+    .mobile-bg-img {
         display: none;
     }
 
@@ -114,9 +117,14 @@ body {
 
 .section-2 {
 
-    .navigation-mobile{
+    .mobile-edit-btn {
         display: none;
     }
+
+    .navigation-mobile {
+        display: none;
+    }
+
     .container-fluid {
         width: 72%;
         margin-top: 26px;
@@ -134,7 +142,6 @@ body {
         padding: 0;
         margin: 0;
     }
-
 
     .navigation {
 
@@ -250,16 +257,24 @@ body {
 
         .meeting-details {
             display: flex;
-            width: 55%;
-            justify-content: space-between;
+            width: 95%;
+            justify-content: flex-start;
             margin-top: 8px;
+
+            .date {
+                margin-right: 48px;
+            }
         }
 
         .job-details {
             display: flex;
-            width: 65%;
-            justify-content: space-between;
+            width: 95%;
+            justify-content: flex-start;
             margin-top: 8px;
+
+            .date {
+                margin-right: 48px;
+            }
         }
 
         .visit-btn,
@@ -276,29 +291,45 @@ body {
 
         .user-details {
             display: flex;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 23px;
             letter-spacing: 0em;
 
             .username {
                 margin: auto 10px;
+
+                .uname {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 23px;
+                }
             }
 
         }
 
+        .mobile-views {
+            display: none;
+        }
+
         .post-details {
             display: flex;
-            justify-content: space-between;
-            width: 30%;
+            /* justify-content: space-between; */
+            justify-content: flex-end;
+            width: 45%;
             align-items: center;
+
+            .views {
+                color: $font-grey;
+                margin-right: 40px;
+            }
+
+
         }
 
         /* .views{
            justify-content: center;
            display: flex;
            align-items: center; 
-        } */
+        }  */
+
         .share-btn {
             @include removestyles();
             width: 42px;
@@ -309,6 +340,10 @@ body {
 
             &:hover {
                 background-color: $hover-darken;
+            }
+
+            .share-text {
+                display: none;
             }
         }
 
@@ -387,6 +422,53 @@ body {
                 font-size: 15px;
             }
         }
+
+        .recommended-section{
+            //border: 2px solid crimson;
+            width: 80%;
+            margin-top: 54px;
+            
+            .rec-header{
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            @for $i from 1 through 4{
+                .rec-thread-#{$i} {
+                    //font-size: 18px;
+                    margin-top:22px ;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .top-div{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .rec-img{
+                        background-image: url("./Images/rec-#{$i}.jpg");
+                        height: 36px;
+                        width: 36px;
+                        margin-right: 12px;
+                    }
+
+                    .rec-btn{
+                        @include removestyles();
+                        font-size: 12px;
+                        background-color: $dark-line-color;
+                        padding: 4px 12px;
+                        border-radius: 14px;
+                        transition: background-color 300ms ease-in;
+                        &:hover{
+                            background-color: $input-bg;
+                        }
+                    }
+
+                }
+            }
+
+            
+        }
+
     }
 
 }
@@ -767,6 +849,14 @@ body {
         display: none;
     }
 
+    .navigation {
+        display: none;
+    }
+
+    .sidebar,
+    .section-2 .sidebar .sidebar-content {
+        display: none;
+    }
 
     .section-1 {
 
@@ -791,41 +881,378 @@ body {
         .mobile-bg-img {
             display: block;
         }
-        
+
         .text-content {
             position: absolute;
             margin: 0 0 5.5% 5%;
         }
 
-       
+
     }
 
     .section-2 {
         .container-fluid {
             width: 100%;
         }
-        .left, .right{
+
+        .left,
+        .right {
             width: fit-content;
         }
 
-        .left{
+        .left {
             font-weight: 700;
             font-size: 18px;
             letter-spacing: 0.05rem;
         }
-        .navigation-mobile{
+
+        .mobile-edit-btn {
+            display: block;
+            @include removestyles();
+            height: 54px;
+            width: 54px;
+            background: linear-gradient(180deg, $grad-1 0%, $grad-2 100%);
+            border-radius: 50%;
+            color: white;
+            position: fixed;
+            top: 90%;
+            right: 5%;
+            transform: scale(1);
+            transition: all 300ms ease-in ;
+            &:hover {
+                font-size: 1.8rem;
+                transform: scale(0.9);
+            }
+        }
+
+        .post-1,
+        .post-2,
+        .post-3,
+        .post-4 {
+
+            font-size: 14px;
+
+            user-details {
+                display: flex;
+
+
+                .username {
+                    margin: auto 10px;
+                }
+
+
+            }
+
+            .post-main-content {
+                margin-top: 1em;
+            }
+
+            .post-details {
+
+                width: 20%;
+                justify-content: flex-end;
+
+                .share-btn {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 36px;
+                    width: 72px;
+                    padding: 10px;
+
+                    i {
+                        margin-right: 4px;
+                    }
+
+                    .share-text {
+                        display: inline-block;
+                    }
+                }
+
+                .views {
+                    display: none;
+                }
+            }
+
+            .mobile-views {
+                display: block;
+                font-size: 12px;
+            }
+
+
+        }
+
+        .navigation-mobile {
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+
+
         }
     }
 
-    .navigation {
+
+    
+
+    .floating-section-mobile {
+
+        //change 
         display: none;
+
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.527);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .signup-mobile {
+            height: 70%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: white;
+            border-radius: 8px 8px 0 0;
+            padding: 20px 22px;
+
+            .header {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn {
+                    border-radius: 50%;
+                    padding: 0;
+                    height: 20px;
+                    width: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .signup-mob-content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                font-size: 13px;
+
+                .name {
+                    display: flex;
+                    width: 100%;
+
+                    .fname,
+                    .lname {
+                        width: 50%;
+                    }
+                }
+
+                .pwd {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                input {
+                    @include removestyles();
+                    max-height: 40px;
+                    border: 1px solid $dark-line-color;
+                    background-color: $input-bg;
+                    padding: 12px;
+                    border-radius: 2px;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .ca-btn {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    margin-top: 22px;
+                }
+
+                .create-acc-btn {
+                    max-height: 36px;
+                    border-radius: 20px;
+                    margin: 22px 0;
+                    font-size: 13px;
+                    width: 45%;
+                }
+
+                .fbsu,
+                .googlesu {
+                    @include removestyles();
+                    height: 38px;
+                    border: 1px solid $dark-line-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    transition: background-color 300ms ease-in;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .fbsu {
+                    margin-bottom: 8px;
+                }
+
+                .tnc {
+                    text-align: center;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: -0.008em;
+                    padding: 5.5% 27%;
+
+                }
+
+            }
+        }
     }
 
-    .sidebar,
-    .section-2 .sidebar .sidebar-content {
+    .floating-login-section-mobile {
+
+        //change
         display: none;
+        
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.527);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .signup-mobile {
+            height: 70%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: white;
+            border-radius: 8px 8px 0 0;
+            padding: 20px 22px;
+
+            .header {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .btn {
+                    border-radius: 50%;
+                    padding: 0;
+                    height: 20px;
+                    width: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .signup-mob-content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 20px;
+                font-size: 13px;
+
+                .pwd {
+                    width: 100%;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                input {
+                    @include removestyles();
+                    max-height: 40px;
+                    border: 1px solid $dark-line-color;
+                    background-color: $input-bg;
+                    padding: 12px;
+                    border-radius: 2px;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .ca-btn {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                }
+
+                .create-acc-btn {
+                    max-height: 36px;
+                    border-radius: 20px;
+                    margin: 22px 0;
+                    font-size: 13px;
+                    width: 45%;
+                }
+
+                .fbsu,
+                .googlesu {
+                    @include removestyles();
+                    height: 38px;
+                    border: 1px solid $dark-line-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    transition: background-color 300ms ease-in;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: $accent-grey;
+                    }
+                }
+
+                .fbsu {
+                    margin-bottom: 8px;
+                }
+
+                .forgot {
+                    text-align: center;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    letter-spacing: -0.008em;
+                    padding: 5.5% 27%;
+
+                }
+
+            }
+        }
     }
+
 }
