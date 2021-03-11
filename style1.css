@@ -8,7 +8,7 @@
 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   /* background-color: khaki; 
     height: 200vh;*/
 }
@@ -68,11 +68,6 @@ body {
 }
 
 .section-1 {
-  /* background: url("./Images/background-1.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    padding: 0 0 5.5% 14%;*/
-  /* height:440px; */
   color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,8 +82,16 @@ body {
   text-shadow: 2px 2px 30px #2E2E2E;
 }
 
+.section-1 .join-mobile {
+  display: none;
+}
+
 .section-1 img {
   height: auto;
+}
+
+.section-1 .mobile-bg-img {
+  display: none;
 }
 
 .section-1 .h1 {
@@ -98,6 +101,10 @@ body {
 .section-1 .text-content {
   position: absolute;
   margin: 0 0 5.5% 14%;
+}
+
+.section-2 .navigation-mobile {
+  display: none;
 }
 
 .section-2 .container-fluid {
@@ -603,6 +610,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
+  /* font-size: calc(10px + 4vw); */
   padding: 10px;
   text-align: center;
 }
@@ -1024,10 +1032,49 @@ body {
     display: none;
   }
   .section-1 .sub-heading {
+    /* @include fontsize(12px); */
+    font-size: 14px;
+  }
+  .section-1 .join-mobile {
     font-size: 12px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 18px;
+  }
+  .section-1 .desktop-bg-img {
+    display: none;
+  }
+  .section-1 .mobile-bg-img {
+    display: block;
+  }
+  .section-1 .text-content {
+    position: absolute;
+    margin: 0 0 5.5% 5%;
   }
   .section-2 .container-fluid {
     width: 100%;
+  }
+  .section-2 .left, .section-2 .right {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .section-2 .left {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.05rem;
+  }
+  .section-2 .navigation-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navigation {
     display: none;

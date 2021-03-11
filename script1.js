@@ -14,9 +14,9 @@ $(".floating-section-login .cross-login").click(hideSignin)
 $(".floating-section-login .signup-btn").click(hideSignin)
 $(".floating-section-login .signup-btn").click(showSignup)
 
-
 //join group func
 $(".join-btn").click(joinGroup)
+$(".join-mobile").click(joinMobGroup)
 
 function showSignup() {
     $(".floating-section").css("display", "flex")

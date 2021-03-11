@@ -11,7 +11,6 @@ $header-green-font:#008A45;
 $bootstrap-blue: #2F6CE5;
 
 
-
 /*mention font-size as variables and reduce font-size by  a particular percentage using media quesy*/
 
 @mixin removestyles {
@@ -33,7 +32,7 @@ $bootstrap-blue: #2F6CE5;
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     /* background-color: khaki; 
     height: 200vh;*/
 }
@@ -81,29 +80,29 @@ body {
 
 .section-1 {
 
-    /* background: url("./Images/background-1.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    padding: 0 0 5.5% 14%;*/
-    /* height:440px; */
-    img {
-        height: auto;
-    }
-
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-shadow:2px 2px 30px $font-dark;
+    text-shadow: 2px 2px 30px $font-dark;
+
+    .join-mobile{
+        display: none;
+    }
+
+    img {
+        height: auto;
+    }
+
+   .mobile-bg-img {
+        display: none;
+    }
+
 
     .h1 {
         line-height: 30px;
-
     }
 
-    .sub-heading{
-        @include font-size(4rem);
-    }
 
     .text-content {
         position: absolute;
@@ -115,6 +114,9 @@ body {
 
 .section-2 {
 
+    .navigation-mobile{
+        display: none;
+    }
     .container-fluid {
         width: 72%;
         margin-top: 26px;
@@ -172,7 +174,8 @@ body {
             margin-left: 16px;
             display: flex;
             align-items: center;
-            i{
+
+            i {
                 margin-right: 8px;
             }
         }
@@ -422,6 +425,7 @@ body {
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
+        /* font-size: calc(10px + 4vw); */
         padding: 10px;
         text-align: center;
 
@@ -579,7 +583,7 @@ body {
     /*change here*/
     display: none;
 
-    
+
 
 }
 
@@ -697,7 +701,7 @@ body {
 
                 }
 
-                .forgotpwd{
+                .forgotpwd {
                     font-size: 12px;
                     text-align: center;
                     margin-top: 23px;
@@ -764,16 +768,55 @@ body {
     }
 
 
-    .section-1{
+    .section-1 {
 
-        .sub-heading{
-            font-size: 12px;
+        .sub-heading {
+            /* @include fontsize(12px); */
+            font-size: 14px;
         }
+
+        .join-mobile {
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            top: 14px;
+            right: 18px;
+
+        }
+
+        .desktop-bg-img {
+            display: none;
+        }
+
+        .mobile-bg-img {
+            display: block;
+        }
+        
+        .text-content {
+            position: absolute;
+            margin: 0 0 5.5% 5%;
+        }
+
+       
     }
 
     .section-2 {
         .container-fluid {
             width: 100%;
+        }
+        .left, .right{
+            width: fit-content;
+        }
+
+        .left{
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.05rem;
+        }
+        .navigation-mobile{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 
