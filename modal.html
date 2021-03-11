@@ -35,12 +35,13 @@
 
 <body>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1"
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1"
         style="float:right; margin-right:100px">
         Launch demo modal
     </button>
 
-    <div class="modal fade floating-section-login" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade floating-section-login" id="myModal1" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel">
         <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="floating-signup">
@@ -95,20 +96,49 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
+    <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+        title="Dismissible popover"
+        data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+
+        <div class="container">
+            <h2>Dropdowns</h2>
+            <p>The .dropdown class is used to indicate a dropdown menu.</p>
+            <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+            <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          
     <script>
-        $('#myModal1').modal('show')
+        /* $('#myModal1').modal('show')
         $(".cross").click(() => {
             /* console.log("hello")
             console.log($("#myModal1"))
             $("#myModal1").removeClass("fade");
             console.log($("#myModal1"))
-            $('#myModal1').modal('hide') */
+            $('#myModal1').modal('hide') 
 
             $("#myModal1").removeClass("in");
             $(".modal-backdrop").remove();
             $("#myModal").hide();
+        }) */
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
         })
     </script>
 </body>

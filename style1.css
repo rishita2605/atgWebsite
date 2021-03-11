@@ -619,6 +619,23 @@ body {
   letter-spacing: 1px;
 }
 
+.section-2 .sidebar .recommended-section .seemore {
+  display: block;
+  margin-top: 60px;
+  font-size: 12px;
+  justify-self: flex-end;
+  text-decoration: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+.section-2 .sidebar .recommended-section .seemore:hover {
+  /* transform: scale(1.1); */
+  font-size: 14px;
+}
+
 .section-2 .sidebar .recommended-section .rec-thread-1 {
   margin-top: 22px;
   display: -webkit-box;
@@ -1278,6 +1295,15 @@ body {
 .floating-section-login .signup-main .signup-main-content .left .fbsu {
   margin-top: 20px;
   margin-bottom: 8px;
+}
+
+.dropdown-menu {
+  -webkit-box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.247);
+          box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.247);
+}
+
+.floating-section-mobile, .floating-login-section-mobile {
+  display: none;
 }
 
 @media (max-width: 991.98px) {
