@@ -2,12 +2,12 @@
   "name": "atgWebsite",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node":"14.15.1"
+  },
   "main": "app.js",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta2",
-    "express": "^4.17.1",
-    "node": "^15.10.0",
-    "rfs": "^9.0.3"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
