@@ -1,7 +1,10 @@
 {
-  "name": "package",
+  "name": "atgWebsite",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node":"14.15.1"
+  },
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1"
